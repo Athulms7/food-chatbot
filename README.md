@@ -12,19 +12,34 @@ An AI-powered chatbot that provides nutritional information, healthy meal sugges
 
 ## Setup
 
-1. Clone the repository
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Athulms7/food-chatbot.git
+   cd food-chatbot
+   ```
+
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Set up your Groq API key as an environment variable:
-   ```bash
-   export GROQ_API_KEY='your-api-key'
-   ```
+
+3. Set up your Groq API key:
+   - Create a `.env` file in the root directory
+   - Add your API key:
+     ```
+     GROQ_API_KEY=your_api_key_here
+     ```
+
 4. Run the application:
    ```bash
    python app.py
    ```
+
+## Local Development
+
+The application will be available at:
+- Local URL: http://localhost:8080
+- Public URL: (provided when running the app)
 
 ## Technologies Used
 
@@ -33,9 +48,9 @@ An AI-powered chatbot that provides nutritional information, healthy meal sugges
 - Groq API
 - Render (for deployment)
 
-## Live Demo
+## Environment Variables
 
-[Add your Render deployment URL here after deployment]
+- `GROQ_API_KEY`: Your Groq API key
 
 ## License
 

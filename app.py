@@ -1,10 +1,11 @@
 import gradio
 from groq import Groq
 import os
+from dotenv import load_dotenv
 
-client = Groq(
-    api_key=os.getenv('GROQ_API_KEY', "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")
-)
+load_dotenv()
+
+client = Groq(api_key=os.getenv('GROQ_API_KEY', "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"))
 
 def initialize_messages():
     return [{"role": "system",
@@ -38,4 +39,4 @@ iface = gradio.ChatInterface(customLLMBot,
                      )
 
 if __name__ == "__main__":
-    iface.launch(server_name="0.0.0.0", server_port=8080) 
+    iface.launch(share=True)
